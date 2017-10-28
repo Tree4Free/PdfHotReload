@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      overflow: hidden;
+    }
+
+    .internal {
+      width: 100%;
+      height: 100%;
+    }
+
+    .container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  </style>
+  <script>
+    setInterval(() => {
+      if (document.hasFocus()) {
+        fetch("/reload").then(function (response) {
+          return response.json();
+        }).then(function (data) {
+          if (data) location.reload();
+        })
+      }
+    }, 2000)
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <object class="internal" data="pdf" type="application/pdf"></object>
+  </div>
+</body>
+
+</html>

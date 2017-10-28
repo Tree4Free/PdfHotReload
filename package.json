@@ -1,0 +1,13 @@
+{
+  "name": "pdf-hot-reload",
+  "version": "1.0.0",
+  "description": "Run a node server to serve a PDF File and have it hotreload.",
+  "main": "index.js",
+  "repository": "https://github.com/Tree4Free/PdfHotReload.git",
+  "author": "Roland Schütz <sch16347@spengergasse.at>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.16.2",
+    "hash_file": "^0.1.1"
+  }
+}
